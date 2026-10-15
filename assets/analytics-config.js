@@ -1,7 +1,8 @@
-// Provider snippets belong in an audited adapter after real accounts are created.
-// Empty IDs and enabled:false never trigger external requests.
+// Public counter identifiers supplied by the site owner; no account credentials.
 window.AFTER_CLASS_ANALYTICS = Object.freeze({
-  liveinternet: { enabled: false, siteId: '' },
-  sberAds: { enabled: false, counterId: '' },
-  myTracker: { enabled: false, counterId: '' }
+  hostname: 'jaguellz.github.io',
+  pathPrefix: '/posle-par/',
+  liveinternet: { enabled: true },
+  sberAds: { enabled: true, counterId: 7753017 },
+  myTracker: { enabled: true, counterId: '3804487' }
 });

@@ -1,7 +1,8 @@
 'use strict';
 (() => {
   const allowedEvents = new Set(['timer_start', 'plan_download', 'checklist_complete']);
-  // No user text, persistent event history, external requests or provider API guesses.
+  // Emit only the event name and page; the optional analytics adapter handles providers.
+  // Never include task text or checklist contents.
   function track(name) {
     if (allowedEvents.has(name)) window.dispatchEvent(new CustomEvent('afterclass:analytics', { detail: { name, page: location.pathname } }));
   }
