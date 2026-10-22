@@ -48,6 +48,7 @@
     w._top100q.push(function () {
       safely(() => {
         counter = w.top100Counter = new w.top100({ project: config.sberAds.counterId });
+        safely(() => counter.drawLogoTo('counter-sberads'));
         pending.splice(0).forEach(name => safely(() => counter.trackEvent(name)));
       });
     });
